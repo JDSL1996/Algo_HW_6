@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{centernot}
+\usepackage[table]{xcolor}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\floatname{algorithm}{}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand*{\proofname}{Solution}
+
+
+\newenvironment{problem}[2][Problem]
+{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+
+\makeatletter
+\renewcommand{\fnum@algorithm}{\fname@algorithm}
+\makeatother
+
+\begin{document}
+
+ 
+\title{CSCI 432\\Homework 6}
+\date{}
+\maketitle
+
+Assigned 11/26/2018, due by end of class (4:00 pm) on 12/03/2018. Marked questions (*) are graded for correctness. The remaining will be graded for effort. Please see the course website for details about expected effort.
+
+You must follow the collaboration policy detailed on the course website. Please type solutions in an appropriate editor (\LaTeX, Word) so that I can review equations and proofs efficiently. 
+
+\begin{problem}{1*}
+Given a graph $G=(V,E)$, we want to color each node with one of three colors. An edge is \textit{satisfied} if the colors for each of its nodes are different. The goal is to maximize the number of satisfied edges.
+
+\begin{itemize}
+\item Design an algorithm that randomly assigns each node a color.
+
+\item Show that the probability a given edge is satisfied is $\frac{2}{3}$.
+
+\item Use the following fact to show that the expected number of edges satisfied by our algorithm is at least $\frac{2}{3}$OPT. 
+
+Fact: For random variables $X$ and $Y$, $E[X+Y] = E[X]+E[Y]$.
+\end{itemize}
+\end{problem}
+
+\begin{problem}{2}
+Suppose you have a random number generator that outputs $1$ with probability $0 < p \le 1$ and $0$ otherwise. Using this as a subroutine, make an algorithm that outputs $1$ with probability $\frac{1}{2}$ and $0$ otherwise.
+\end{problem}
+
+
+\begin{problem}{3}
+Show up and participate in the workshop session on 11/30.
+\end{problem}
+ 
+
+
+\end{document}
