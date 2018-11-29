@@ -69,7 +69,7 @@ $0_{(probability\_of\_not\_being\_satisfied)}$
 
 - Since the summation of expected values is equal to the expected value of the summation the expected value of all edges able to be satisfied in graph G is $\frac{2}{3}$ * n
 
-- Since OPT will chose the maximum number of edges able to be satisfied in graph G OPT = n
+- Since OPT will choose the maximum number of edges able to be satisfied in graph G OPT = n
 
 - $\therefore ALG \ge \frac{2}{3} OPT$
 \end{itemize}
@@ -77,6 +77,15 @@ $0_{(probability\_of\_not\_being\_satisfied)}$
 
 \begin{problem}{2}
 Suppose you have a random number generator that outputs $1$ with probability $0 < p \le 1$ and $0$ otherwise. Using this as a subroutine, make an algorithm that outputs $1$ with probability $\frac{1}{2}$ and $0$ otherwise.
+
+-If you run the random number generator many times and multiply the outputs the probability of receiving a zero increases by increasing the number of multiplications.
+
+-Since the numbers are one and zero multiplying a large number of them together will get a value of zero any time one of them is zero or one any time all of them are one
+
+-Since the expected value is equal to the probability multiplied by the outcome the expected value of one iteration is .99
+
+-running this 69 times and multiplying the outcome yields a probability of around 50 that the outcome is 1 leaving a probability around 50 that the outcome is zero for a group of 69 random number generations
+
 \end{problem}
 
 \begin{problem}{3*}
