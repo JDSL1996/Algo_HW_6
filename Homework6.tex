@@ -6,6 +6,7 @@
 \usepackage{algpseudocode}
 \usepackage{algorithm}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \floatname{algorithm}{}
 \author{Joshua Stephenson-Losey,
 Keefer Sands,
@@ -42,11 +43,29 @@ Given a graph $G=(V,E)$, we want to color each node with one of three colors. An
 \begin{itemize}
 \item Design an algorithm that randomly assigns each node a color.
 
+-For each node create a random integer between 1 and 3 (inclusive) and assign the node to a color using this number (ex. 1 = blue.... ect.)
+
 \item Show that the probability a given edge is satisfied is $\frac{2}{3}$.
+
+-Looking at an edge with two nodes and three possible colors for each node gives 9 total combinations of colors, only three of which are invalid. With total probability of one this makes the probability of any given edge being satisfied $\frac{2}{3}$.
 
 \item Use the following fact to show that the expected number of edges satisfied by our algorithm is at least $\frac{2}{3}$OPT. 
 
 Fact: For random variables $X$ and $Y$, $E[X+Y] = E[X]+E[Y]$.
+
+- Let X represent a random single edge-vertex group that equals one if the edge is satisfied and zero otherwise
+
+- The expected value of X is $\frac{2}{3} * 1_{(probability\_of\_being\_satisfied)} + \frac{1}{3} * 0_{(probability\_of\_not\_being\_satisfied)}$
+
+- The expected value of each edge is then equal to $\frac{2}{3}$
+
+- The expected value of n edges is then $\frac{2}{3}$ * n
+
+- Since the summation of expected values is equal to the expected value of the summation the expected value of all edges able to be satisfied in graph G is $\frac{2}{3}$ * n
+
+- Since OPT will chose the maximum number of edges able to be satisfied in graph G OPT = n
+
+- $\therefore ALG \ge \frac{2}{3} OPT$
 \end{itemize}
 \end{problem}
 
